@@ -65,7 +65,9 @@ FRONTEND_URL=http://localhost:Port_number
 ```
 
 Create ```bash .env.local``` file in frontend directory:
-```bash VITE_API_BASE_URL=http://localhost:Port_Num/api```
+```bash 
+VITE_API_BASE_URL=http://localhost:Port_Num/api
+```
 
 Running the Application
 1.Start the backend server:

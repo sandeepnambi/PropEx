@@ -80,11 +80,6 @@ cd frontend
 npm run dev
 ```
 
-The application will be available at:
-
-Frontend: [http://localhost:Frontend_PortNum](http://localhost:Frontend_PortNum)  
-Backend API: [http://localhost:Backend_PortNum](http://localhost:Backend_PortNum)
-
 ### Project Structure:
 
 ```bash

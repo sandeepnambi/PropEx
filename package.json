@@ -1,0 +1,21 @@
+{
+  "name": "realestate",
+  "version": "1.0.0",
+  "description": "Real Estate Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix backend",
+    "build": "npm run build --prefix backend",
+    "test": "npm test --prefix backend",
+    "lint": "npm run lint --prefix backend",
+    "format": "npm run format --prefix backend",
+    "install:all": "npm install && cd backend && npm install"
+  },
+  "keywords": ["realestate", "property", "listings"],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "backend"
+  ]
+}

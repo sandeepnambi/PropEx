@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #13151a; /* Dark luxury background */
+  color: #f3f4f6; /* Light gray text by default */
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(223, 166, 89, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 166, 89, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1f26;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #dfa659, #c9944a);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #c9944a, #b8860b);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(28, 31, 38, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Professional button styles */
+.btn-primary {
+  @apply bg-primary text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-primary-hover hover:shadow-[0_0_15px_rgba(223,166,89,0.3)] transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-surface text-primary border border-primary/50 px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:-translate-y-1;
+}
+
+/* Professional shadows */
+.shadow-professional {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200;
+}
+
+/* Premium Form Inputs */
+.input-premium {
+  @apply w-full bg-surface/50 border border-gray-700/50 rounded-xl py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-gray-600 backdrop-blur-sm shadow-inner;
+}
+
+.input-premium-label {
+  @apply block text-sm font-semibold text-gray-400 mb-2 tracking-wide;
+}
+
+/* Glass Panel for Forms and Cards */
+.glass-panel {
+  @apply bg-[#1a1d24]/80 backdrop-blur-md border border-gray-800 rounded-2xl shadow-xl;
+}

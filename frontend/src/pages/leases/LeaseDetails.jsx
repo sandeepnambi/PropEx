@@ -265,7 +265,7 @@ export default function LeaseDetails() {
                       </div>
                       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                         <a 
-                          href={`http://localhost:5001${doc.fileUrl}`} 
+                          href={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api').replace(/\/api$/, '')}${doc.fileUrl}`} 
                           target="_blank" 
                           rel="noreferrer"
                           className="p-2 text-gray-400 hover:text-white transition-colors"

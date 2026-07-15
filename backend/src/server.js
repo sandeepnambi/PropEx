@@ -30,8 +30,11 @@ const PORT = process.env.PORT || 5001;
 // Stripe Webhooks need the raw body for signature verification
 app.post('/api/webhooks/stripe', express.raw({ type: 'application/json' }), stripeWebhook);
 
-// CORS configuration
-const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  process.env.FRONTEND_URL
+].filter(Boolean);
 
 // Apply CORS middleware
 app.use(

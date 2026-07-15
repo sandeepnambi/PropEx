@@ -36,12 +36,16 @@ const allowedOrigins = [
   process.env.FRONTEND_URL
 ].filter(Boolean).map(url => url.replace(/\/$/, ''));
 
+console.log('CORS Allowed Origins Initialized:', allowedOrigins);
+
 // Apply CORS middleware
 app.use(
   cors({
     origin: (origin, callback) => {
       const normalizedOrigin = origin ? origin.replace(/\/$/, '') : '';
-      if (!origin || allowedOrigins.includes(normalizedOrigin)) {
+      const isAllowed = !origin || allowedOrigins.includes(normalizedOrigin);
+      console.log(`CORS Check - Origin: "${origin}", Normalized: "${normalizedOrigin}", Allowed: ${isAllowed}`);
+      if (isAllowed) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));
